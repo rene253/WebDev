@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+    .buttons{
+        color:white;
+        background-color: #287404;
+        justify-content: center;
+        margin: 30px;
+        display:flex;
+        text-align: center;
+        height: 40px;
+        width: 100px;
+        border-color: white;
+        
+    
+        
+    }
+
+
+    main{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    </style>
+
+<body>
+    
+
+    <main>
+
+        <button class = "buttons" id="increase">increase</button>
+        <button class = "buttons" id="decrease">decrease</button>
+        <button class = "buttons" id="reset">reset</button>
+        <p><label id="label"></label></p>
+
+    </main>
+
+
+    <script>
+        const increase = document.getElementById("increase");
+        const decrease = document.getElementById("decrease");
+        const reset = document.getElementById("reset");
+        const label = document.getElementById("label");
+        let count = 0;
+        label.innerText = count;
+
+        increase.addEventListener("click", () =>{
+            count = count +1;
+            label.innerText = count
+        })
+
+        decrease.addEventListener("click", () =>{
+            count = count-1;
+            label.innerText = count
+        })
+
+        reset.addEventListener("click", () =>{
+            count = 0;
+            label.innerText = count
+        })
+        
+
+
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
